@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Browser Redirect</h1>
+
+      <!-- Setup screen -->
+      <div id="setup-screen" style="display: none">
+        <p class="subtitle">One-time setup required</p>
+
+        <div class="info-box">
+          <p class="info-title">What does this do?</p>
+          <p>Downloads a small helper script (~4KB) to your machine that allows the extension to open URLs in other browsers. No data is sent to any server.</p>
+        </div>
+
+        <label class="field-label" for="install-path">Install location:</label>
+        <input type="text" id="install-path" />
+        <p id="path-warning" class="path-warning" style="display: none"></p>
+
+        <p class="setup-text" id="setup-instruction">
+          Paste this command in <strong>Terminal</strong>:
+        </p>
+        <div class="command-box">
+          <code id="install-command"></code>
+          <button id="copy-btn" title="Copy">Copy</button>
+        </div>
+        <p class="setup-hint">Then restart your browser and reopen this popup.</p>
+        <button id="retry-btn" class="secondary-btn">Check again</button>
+      </div>
+
+      <!-- Main rules screen -->
+      <div id="main-screen" style="display: none">
+        <p class="subtitle">Redirect websites to another browser</p>
+
+        <div id="rules-list"></div>
+
+        <div class="add-section">
+          <input
+            type="text"
+            id="url-input"
+            placeholder="Domain (e.g. youtube.com)"
+          />
+          <select id="browser-select">
+            <option value="">Select a browser...</option>
+            <option value="brave">Brave</option>
+            <option value="firefox">Firefox</option>
+            <option value="safari">Safari</option>
+            <option value="edge">Microsoft Edge</option>
+            <option value="chrome">Google Chrome</option>
+            <option value="custom">Custom...</option>
+          </select>
+          <input
+            type="text"
+            id="custom-browser-input"
+            placeholder="Browser app name (e.g. Vivaldi)"
+          />
+          <div class="form-buttons">
+            <button id="add-btn">+ Add Rule</button>
+            <button id="cancel-btn" class="cancel-btn" style="display: none">
+              Cancel
+            </button>
+          </div>
+        </div>
+
+        <div id="status-bar" class="status-bar"></div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

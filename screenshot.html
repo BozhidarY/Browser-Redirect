@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Screenshot</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px;
+    height: 800px;
+    background: linear-gradient(135deg, #4A90D9 0%, #6C5CE7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow: hidden;
+  }
+
+  .popup {
+    width: 370px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+
+  h1 { font-size: 18px; font-weight: 600; color: #1a1a1a; }
+  .subtitle { font-size: 12px; color: #888; margin-top: 2px; margin-bottom: 16px; }
+
+  .rule {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    background: #f7f7f8;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .rule-url { font-weight: 500; color: #1a1a1a; }
+  .rule-arrow { margin: 0 10px; color: #bbb; }
+  .rule-browser { color: #555; flex: 1; }
+  .rule-actions { display: flex; gap: 2px; padding-left: 8px; }
+  .rule-actions span { color: #ccc; font-size: 16px; padding: 2px 4px; }
+
+  .add-section { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+  input, select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #999;
+    background: #fff;
+  }
+  .add-btn {
+    width: 100%;
+    padding: 10px;
+    background: #4a90d9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+  }
+
+  .tagline {
+    position: absolute;
+    bottom: 60px;
+    color: rgba(255,255,255,0.9);
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+  }
+  .tagline-sub {
+    position: absolute;
+    bottom: 32px;
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+  <div class="popup">
+    <h1>Browser Redirect</h1>
+    <p class="subtitle">Redirect websites to another browser</p>
+
+    <div class="rule">
+      <span class="rule-url">youtube.com</span>
+      <span class="rule-arrow">&rarr;</span>
+      <span class="rule-browser">Brave</span>
+      <span class="rule-actions"><span>&#9998;</span><span>&times;</span></span>
+    </div>
+    <div class="rule">
+      <span class="rule-url">reddit.com</span>
+      <span class="rule-arrow">&rarr;</span>
+      <span class="rule-browser">Firefox</span>
+      <span class="rule-actions"><span>&#9998;</span><span>&times;</span></span>
+    </div>
+    <div class="rule">
+      <span class="rule-url">github.com</span>
+      <span class="rule-arrow">&rarr;</span>
+      <span class="rule-browser">Safari</span>
+      <span class="rule-actions"><span>&#9998;</span><span>&times;</span></span>
+    </div>
+
+    <div class="add-section">
+      <input type="text" value="Domain (e.g. youtube.com)" disabled>
+      <select disabled><option>Select a browser...</option></select>
+      <button class="add-btn">+ Add Rule</button>
+    </div>
+  </div>
+
+  <div class="tagline">Redirect any website to your preferred browser</div>
+  <div class="tagline-sub">Set rules once — they work automatically</div>
+</body>
+</html>
