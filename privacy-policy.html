@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — Browser Redirect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 16px;
+      color: #222;
+    }
+    h1, h2 {
+      color: #111;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background: #f5f5f5;
+    }
+    code {
+      background: #f2f2f2;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Privacy Policy — Browser Redirect</h1>
+
+  <p><strong>Last updated:</strong> April 23, 2026</p>
+
+  <h2>Data Collection</h2>
+  <p>
+    Browser Redirect does <strong>not</strong> collect, store, or transmit any personal data.
+  </p>
+
+  <h2>How It Works</h2>
+  <ul>
+    <li>Redirect rules (domain + browser pairs) are stored <strong>locally</strong> in your browser using Chrome's built-in storage API.</li>
+    <li>The native messaging host runs <strong>locally</strong> on your machine to launch the target browser. It does not communicate with any external servers.</li>
+    <li>No analytics, tracking, or telemetry of any kind is included.</li>
+  </ul>
+
+  <h2>Permissions</h2>
+
+  <table>
+    <tr>
+      <th>Permission</th>
+      <th>Why it's needed</th>
+    </tr>
+    <tr>
+      <td><code>webNavigation</code></td>
+      <td>Detect when you navigate to a URL that matches one of your rules</td>
+    </tr>
+    <tr>
+      <td><code>nativeMessaging</code></td>
+      <td>Communicate with the local helper script that opens the target browser</td>
+    </tr>
+    <tr>
+      <td><code>storage</code></td>
+      <td>Save your redirect rules locally</td>
+    </tr>
+    <tr>
+      <td><code>tabs</code></td>
+      <td>Close the Chrome tab after redirecting to the target browser</td>
+    </tr>
+  </table>
+
+  <h2>Third Parties</h2>
+  <p>
+    This extension does not share any data with third parties.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    If you have questions about this policy, open an issue on the
+    <a href="https://github.com/BozhidarY/browser-redirect/issues" target="_blank" rel="noopener">
+      GitHub repository
+    </a>.
+  </p>
+
+</body>
+</html>
